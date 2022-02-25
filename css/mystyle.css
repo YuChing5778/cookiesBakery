@@ -1,0 +1,391 @@
+:root {
+    --darkBrown: #753c1d;
+    --lightBrown: #bf9057;
+    --peachOrange:#f5cc94;
+    --skin:#f2d1b3;
+    --white:#f2f2f2;
+    --gray:#bcbcbc;
+}
+/* 首頁區塊標題 */
+.article-title{
+    color: var(--darkBrown);
+    border-left: 3px solid var(--lightBrown);
+    font-weight: bold;
+    
+}
+.bg-white{
+    background-color:var(--white) ;
+    
+}
+.bg-darkBrown{
+    background-color: var(--darkBrown);
+}
+.bg-lightBrown{
+    background-color: var(--lightBrown);
+}
+/* footer 字和icon */
+.text-color-LBrown,.fa-icon-Lbrown{
+    color: var(--lightBrown);
+}
+.a-link-brown{
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--darkBrown);
+    font-size: 16pt;
+    font-weight: bold;
+  }
+.shoppingLink{
+    color: var(--darkBrown);
+}
+.shoppingLink:hover{
+    color: black;
+}
+.a-link-brown:hover, .a-link-brown:focus {
+    text-decoration: none;
+    color: black;
+}
+.btn-darkBrown{
+    color: var(--darkBrown);
+}
+/* 搜尋框 */
+#item-search{
+    max-width: 900px;
+    position: absolute;
+    z-index: 2;
+    background: var(--peachOrange);
+    border-radius: 5px;
+    display: none;
+    top: 80px;
+    right: 80px;
+}
+.searchBtn{
+    color: white;
+    background: var(--darkBrown);
+    border: 0;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+/* 購物車清單品項 */
+#cart-list tr td>p,#cart-list tr td>label{
+    margin: 0;
+    font-size: 10pt;  
+}
+#homeCheckoutArea{
+    text-align: center;
+}
+#homeCheckoutBtn{
+    color: white;
+    background: var(--lightBrown);
+    border: 0;
+    border-radius: 5px;
+    width: 70px;
+    height: 25px;
+    font-size: 8pt;
+    margin: 0 0 0.3rem 0;
+}
+.card-list div:last-child{
+    width: 100px;
+}
+/* 關於我們 */
+.information{
+    font-size: 10pt;
+    text-align: left;
+}
+
+.footer-color-Dbrown{
+    background-color: var(--darkBrown);
+}
+
+
+
+/* 首頁熱門商品靜態輪播 */
+#hottestProduct{
+    position: relative;  
+}
+.card-wrapper{
+    
+    position: absolute;
+    overflow: hidden;
+}
+div #hottestProduct>.hot-control-next{
+    position: absolute; 
+    right: -10px;
+    top: 150px;
+    z-index: 3;
+    background-color: var(--white);
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    text-align: center;
+    opacity: 70%;
+    
+}
+div #hottestProduct>.hot-control-next:hover{
+    opacity: 100%;
+}
+#hottestProduct>.hot-control-pre{
+    position: absolute;
+    z-index: 3;
+    left: -15px;
+    top: 150px;
+    background-color: var(--white);
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    text-align: center;
+    opacity: 70%;
+}
+div #hottestProduct>.hot-control-pre:hover{
+    opacity: 100%;
+}
+.price-color-brown{
+    color: var(--lightBrown);
+}
+#card-wapper>div{
+    transform: translateX(-1px);
+}
+/* 左移 */
+/* .moveleft{
+    transition: transform 2s linear;
+}
+.moveleft:hover~div{
+   
+    transition: transform 5s linear;
+}
+.moveleft:hover,.moveleft:hover~div{
+   
+    transform:translateX(-800px) ;
+} */
+/* 商品的購物車按鈕 */
+.addToCart{
+    color: white;
+    background: var(--lightBrown);
+    border: 0;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+}
+/* 商品呈現方式的按鈕grid/list */
+.btn-items-grid{
+    opacity: 80%;
+    border-radius: 10px;
+    background: #753c1d;
+}
+.btn-items-list{
+    opacity: 80%;
+    border-radius: 10px;
+    background: #bf9057;
+}
+/* 商品呈現方式grid */
+#grid-content{
+    display: block;
+}
+#grid-page1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#grid-page2{
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+/* 商品呈現方式list */
+#list-content{
+    display: none;
+}
+#list-page1{
+    display:block;
+}
+#list-page2{
+    display:none;
+    
+}
+#list-page3{
+    display:none;
+    
+}
+.each-list{
+    display: flex;
+    margin: 0 auto;
+    max-width: 850px;
+    border: 2px solid #bcbcbc;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+/* 商品名稱 */
+.list-title,.list-title:hover{
+    text-decoration: none;
+    color: black;
+}
+/* 購物車wrapper */
+#cart-wrapper{
+    max-width: 960px;
+    margin: 1rem auto;
+    
+}
+/* 空的購物車 */
+#emptyCart{
+    display: block;
+    background: var(--peachOrange);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16pt;
+}
+#emptyCart>h3{
+    font-weight: bolder;
+}
+/* 購物車標題數字 */
+.cart-step{
+    text-align: center;
+    display: inline-block;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background: gray;
+}
+.cart-title{
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+}
+.img-size{
+    width: 150px;
+    height: 150px;
+}
+.step-area{
+    margin-bottom: 0.5rem;
+    max-width: 960px;
+}
+/* 數量按鈕 */
+.quantity-btn{
+    background: white;
+    border: 1px solid var(--gray);
+    border-radius: 2px;
+    width: 35px;
+    height: 35px;
+    margin: 0 0.5rem;
+    text-align: center;
+}
+.delete-btn{
+    background: crimson;
+    border: 1px solid crimson;
+    border-radius: 2px;
+    width: 35px;
+    height: 35px;
+    margin: 0 0.5rem;
+}
+/* 購物車內容表格 */
+#haveProduct{
+    display: none;
+}
+#cart-content th:not(:first-child),
+#cart-content td:not(:first-child){
+    text-align: center;
+}
+#cart-content{
+    width: 100%;
+    table-layout: auto;
+    border: 1px solid gainsboro;
+}
+
+#cart-content th
+ {
+    background-color: gainsboro;   
+}
+
+/* 貨運方式 */
+#deliveryMethod,#cnvArea,#homeDeArea,#paymentArea{
+    border: 1px solid gainsboro;   
+}
+/* 當貨運方式選超商會顯示哪間超商 */
+#cnvArea{
+    display: block;
+}
+#homeDeArea{
+    display: none;
+}
+/* 貨運小標題 */
+#deliveryMethod>p,#cnvArea>p,#cnvDeInform>p,
+#homeDeArea>p,#paymentArea>p,#homeDeInform>p{
+    background: gainsboro;
+}
+/* 配送選項樣式 */
+.myOption>li{
+    text-align: middle;
+    border: 1px solid var(--gray);
+    margin: 0.5rem auto;
+    padding: 0.5rem 0 0rem 0.5rem;
+    width: 400px;
+    border-radius: 5px;
+}
+
+/* 購物人資訊樣式 */
+.buyerName,.buyerPhone,.buyerAddress{
+    display: inline-flex;
+    margin: 0 3rem;
+}
+.buyerPhone label>input{
+    width: 400px;
+}
+.buyerAddress label>input{
+    min-width: 600px;
+    
+}
+/* 超商和付款選項圖 */
+.img-icon,#ATM{
+    width: 30px;
+    height: 30px;
+}
+#LinePay{
+    width: 100px;
+    height: 40px;
+}
+/* 結帳區 */
+#checkoutArea>table{
+    margin: 0 auto;
+    min-width: 400px;
+}
+
+#checkoutArea tr:last-child{
+    border-top: 1px solid var(--darkBrown);
+}
+/* 價錢向右 */
+#checkoutPrice tr td{
+    text-align: right;
+}
+/* 價錢標題字大小 */
+#checkoutPrice tr th{
+    font-size: 12pt;
+}
+#totPriceLabel{
+    color: var(--darkBrown);
+    font-weight: bolder;
+}
+.checkoutBtnArea{
+    margin-top:1rem;
+    text-align: center;
+}
+#checkoutBtn{
+    color: white;
+    background: var(--lightBrown);
+    border: 0;
+    border-radius: 5px;
+    width: 300px;
+    height: auto;
+}
+@media screen and (max-width:990px) {
+    .d-flex-column-lg{
+        flex-direction: column;
+        margin-bottom: 1em;
+        
+    }
+    /* 首頁熱門商品靜態輪播 */ 
+    #hottestProduct{
+        max-width: 990px;
+    }
+}

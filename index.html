@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cookies 蛋糕店</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>    
+    <script src="js/bootstrap.min.js" ></script>
+    
+</head>
+<body>
+    <div class="container">
+      <!-- 搜尋框 -->
+      <div id="item-search" class="order-1 p-2">
+        <form id="search-form d-flex" class="form-inline ">
+          <div class="col-8 col-lg-9">
+            <input style="width: 100%;" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          </div>
+          <div class="ml-auto col-4 col-lg-3">
+            <button class="searchBtn" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+      
+      <!-- 導覽列 -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand order-0" href="homePage.html"><img src="img/logo.png" alt="logo"> </a>
+        <div class="order-lg-4 order-1 ml-auto">
+          <button class="btn btn-darkBrown mb-0" type="button" 
+            data-toggle="modal" data-target="#loginModal" data-backdrop="static">
+            <i class="fa fa-user fa-lg"></i>
+          </button>
+          <button class="btn btn-darkBrown">
+            <a class="shoppingLink" href="shoppingCart.html"><span class="fa fa-shopping-cart fa-lg"></span></a>
+            <i class="badge badge-pill badge-dark bg-lightBrown">0</i>
+          </button>
+          <button type="button" class="btn btn-darkBrown border-0 mb-0"><i class="fa fa-search fa-lg"></i></button>  
+        </div>
+          
+        <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse order-3" id="navbarSupportedContent">
+          <ul class="navbar-nav ">
+            <li class="nav-item active">
+              <a class="a-link-brown" href="homePage.html">首頁 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item text-brown">
+              <a class="a-link-brown" href="#hottestProduct">熱門商品</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="a-link-brown dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                商品種類
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="allProduct.html">各項商品</a>
+                <div class="dropdown-divider m-0"></div>
+                <a class="dropdown-item" href="#">手工餅乾</a>
+                <div class="dropdown-divider m-0"></div>
+                <a class="dropdown-item" href="#">客製化蛋糕</a>
+                <div class="dropdown-divider m-0"></div>
+                <a class="dropdown-item" href="#">小蛋糕</a>
+                <div class="dropdown-divider m-0"></div>
+                <a class="dropdown-item" href="#">手工派</a>
+                <div class="dropdown-divider m-0"></div>
+                <a class="dropdown-item" href="#">精美禮盒</a>
+              </div>
+            </li>
+            <li class="nav-item text-brown">
+              <a class="a-link-brown" href="#aboutUs">關於我們</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <!-- 輪播 -->
+      <div id="playList" class="carousel slide" data-ride="carousel">
+
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#playList" data-slide-to="0" class="active"></li>
+            <li data-target="#playList" data-slide-to="1"></li>
+            <li data-target="#playList" data-slide-to="2"></li>
+          </ul>
+          <a class="carousel-control-prev" href="#playList" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#playList" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <!-- 輪播項目，編號: 零 -->
+                  <picture>
+                    <source srcset="img/ad_1200x700.jpg" media="(min-width: 768px)" >
+                    <source srcset="img/ad_924x500.jpg" media="(min-width: 576px)">
+                    <img srcset="img/ad_739x400.jpg" class="d-block img-fluid">
+                  </picture>
+              </div>
+              <div class="carousel-item">
+                  <!-- 輪播項目，編號: 壹 -->
+                  <picture>
+                      <source srcset="img/ad2_1200x700.jpg" media="(min-width: 768px)" >
+                      <source srcset="img/ad2_924x500.jpg" media="(min-width: 576px)">
+                      <img srcset="img/ad2_739x400.jpg" class="d-block img-fluid">
+                  </picture>
+              </div>
+              
+              <div class="carousel-item">
+                  <!-- 輪播項目，編號: 貳 -->
+                  <picture>
+                      <source srcset="img/ad3_1200x700.jpg" media="(min-width: 768px)">
+                      <source srcset="img/ad3_924x500.jpg" media="(min-width: 576px)">
+                      <img srcset="img/ad3_739x400.jpg" class="d-block img-fluid">
+                  </picture>
+              </div>
+            </div>
+      </div>
+      <!-- 各類商品 -->
+      <h4 class="article-title mt-3">各類商品</h4>
+      <div class="row mx-auto">
+        <div class="col-12 col-lg-4">
+          <div class="row mb-1">
+            <a href="#"><img class="img-fluid" src="img/customizeType.png" alt=""></a>
+          </div>
+          <div class="row">
+            <a href="#"><img class="img-fluid" src="img/giftBoxType.png" alt=""></a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <a href="#"><img class="img-fluid" src="img/smallCakeType.png" alt=""></a>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="row mb-1">
+            <a href="#"><img class="img-fluid" src="img/weddingCakeType.png" alt=""></a>
+          </div>
+          <div class="row">
+            <a href="#"><img class="img-fluid" src="img/fruitPieType.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 熱門商品 -->
+      <div id="hottestProduct" class="my-3">
+        <h4 class="article-title">熱門商品</h4>
+        <a onclick="move(-1)" class="hot-control-pre " ><span class="carousel-control-prev-icon"></span></a>
+        <a onclick="move(1)" class="hot-control-next" ><span class="carousel-control-next-icon"></span></a>
+        <div id="card-wrapper " class="d-flex overflow-hidden">
+          <div class="card mr-2">
+            <a href="#"><img class="img-fluid" src="img/cake1.jpg"> </a>
+            <div class="card-body pt-1">
+              <p class="card-text">野莓巧克力蛋糕</p>
+              <label class="price-color-brown">NT$80</label>
+              <button class="float-right mr-3 mb-2  addToCart" >
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card mr-2">
+            <a href="#"><img class="img-fluid" src="img/cookie1.jpg"> </a>
+            <div class="card-body pt-1">
+              <p class="card-text">奶油酥餅乾</p>
+              <label class="price-color-brown">NT$150</label>
+              <button class="float-right mr-3 mb-2  addToCart" >
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card mr-2">
+            <a href="#"><img class="img-fluid" src="img/giftBox.jpg"> </a>
+            <div class="card-body pt-1">
+              <p class="card-text">小餅乾禮盒</p>
+              <label class="price-color-brown">NT$180</label>
+              <button class="float-right mr-3 mb-2  addToCart" >
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card mr-2">
+            <a  href="#"><img class="img-fluid" src="img/pie1.jpg"> </a>
+            <div class="card-body pt-1">
+              <p class="card-text">藍莓派</p>
+              <label class="price-color-brown">NT$290</label>
+              <button class="float-right mr-3 mb-2  addToCart" >
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card mr-2">
+            <a  href="#"><img class="img-fluid" src="img/smallCake1.jpg"> </a>
+            <div class="card-body pt-1">
+              <p class="card-text">熔岩巧克力蛋糕</p>
+              <label class="price-color-brown">NT$90</label>
+              <button class="float-right mr-3 mb-2  addToCart" >
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card mr-2">
+            <a  href="#"><img class="img-fluid" src="img/customize2.jpg"> </a>
+            <div class="card-body pt-1">
+              <p class="card-text">客製化蛋糕*2</p>
+              <label class="price-color-brown">NT$180</label>
+              <button class="float-right mr-3 mb-2  addToCart" >
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card mr-2">
+            <a  href="#"><img class="img-fluid" src="img/fruitPie.jpg"> </a>
+            <div class="card-body pt-1">
+              <p class="card-text">柳橙水果派</p>
+              <label class="price-color-brown">NT$310</label>
+              <button class="float-right mr-3 mb-2  addToCart" >
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 四特色 -->
+      <div class="row my-2">
+        <div class="col-12 col-md-6 col-lg-3 text-center my-auto">
+          <img class="img-fluid mt-4" src="img/car_150x150.jpg" alt="宅配服務">
+          <label class="d-block">宅配服務</label>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 text-center my-auto">
+          <img class="img-fluid" src="img/house_150x150.jpg" alt="超商取貨">
+          <label class="d-block mt-2">超商取貨</label>
+        </div>
+        <div class="col-12 col-md-6  col-lg-3 text-center my-auto">
+          <img class="img-fluid" src="img/payment__150x150.jpg" alt="多元支付">
+          <label class="d-block">多元支付</label>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 text-center my-auto">
+          <img class="img-fluid" src="img/service_150x150.jpg" alt="優質客服">
+          <label class="d-block">優質客服</label>
+        </div>
+      </div>
+      <!--關於我們  -->
+      <div class="row bg-white " >
+          <div class="col-12 col-lg-6">
+            <table  id="information" class="information">
+              <span id="aboutUs" class="text-color-LBrown">關於我們</span> 
+              <tr>
+                <td><i class="fa fa-phone fa-icon-Lbrown mr-1"></i></td>
+                <td>電話: (04)248-325-85</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-clock-o fa-icon-Lbrown mr-1"></i></td>
+                <td>營業時間: 週二至週五 9:00~22:00</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-lg fa-map-marker fa-icon-Lbrown mr-1"></i></td>
+                <td>總店地址: 台中市XX區XX路1號</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-envelope fa-sm fa-icon-Lbrown mr-1"></i></td>
+                <td>電子信箱: cookie@gmail.com</td>
+              </tr>
+              </table>
+          </div>
+          <div class="col-12 col-lg-6">
+            <table class="information">
+              <span class="text-color-LBrown">分店地址</span> 
+              <tr>
+                <td ><i class="fa fa-phone fa-icon-Lbrown mr-1"></i></td>
+                <td>電話: (03)258-555-55</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-clock-o fa-icon-Lbrown mr-1"></i></td>
+                <td>營業時間: 週二至週五 9:00~22:00</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-lg fa-map-marker fa-icon-Lbrown mr-1"></i></td>
+                <td>公益店: 台中市XX區公益路2號</td>
+              </tr>
+            </table>
+          </div>       
+      </div>
+      <div class="footer footer-color-Dbrown ">
+      <p class="text-white text-center mb-0" style="font-size: 9pt;">© 2021-2022 author: Yu-Ching</p>
+      </div>
+      <!-- 對話盒 -->
+      <div class="modal" id="loginModal" >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-darkBrown">
+              <h4 class="modal-title text-white">登入</h4>
+              <button type="button" class="close btn-lightBrown" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form action="#">
+                <div class="form-group">
+                  <label for="userNameText">
+                    <i class="fa fa-user"></i>帳號:
+                  </label>
+                  <input type="text" name="userAccount" 
+                  id="userNameText" placeholder="請輸入帳號或E-mail"
+                  class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="userNameText">
+                    <i class="fa fa-lock"></i>密碼:
+                  </label>
+                  <input type="password" name="password" 
+                  id="password" placeholder="請輸入密碼"
+                  class="form-control">
+                </div>
+                <div class="float-right">
+                  <button type="button" 
+                          id="loginButton" 
+                          class="btn btn-outline-success">
+                          <i class="fa fa-check"></i> 登入
+                  </button>
+                  <button type="button" 
+                          id="cancelButton" 
+                          data-dismiss="modal"
+                          class="btn btn-outline-secondary">
+                          <i class="fa fa-remove"></i> 取消
+                  </button> 
+                </div> 
+              </form>
+            </div>
+            <div class="modal-footer">
+              <p>
+                還不是會員嗎? <a href="#">加入我們</a> | 
+                <a href="#">忘記密碼?</a>
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/myStyle.js"></script>
+</body>
+</html>
