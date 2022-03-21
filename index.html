@@ -77,7 +77,50 @@
           </ul>
         </div>
       </nav>
-      
+      <!-- 輪播 -->
+      <div id="playList" class="carousel slide" data-ride="carousel">
+
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#playList" data-slide-to="0" class="active"></li>
+            <li data-target="#playList" data-slide-to="1"></li>
+            <li data-target="#playList" data-slide-to="2"></li>
+          </ul>
+          <a class="carousel-control-prev" href="#playList" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#playList" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <!-- 輪播項目，編號: 零 -->
+                  <picture>
+                    <source srcset="img/ad_1200x700.jpg" media="(min-width: 768px)" >
+                    <source srcset="img/ad_924x500.jpg" media="(min-width: 576px)">
+                    <img srcset="img/ad_739x400.jpg" class="d-block img-fluid">
+                  </picture>
+              </div>
+              <div class="carousel-item">
+                  <!-- 輪播項目，編號: 壹 -->
+                  <picture>
+                      <source srcset="img/ad2_1200x700.jpg" media="(min-width: 768px)" >
+                      <source srcset="img/ad2_924x500.jpg" media="(min-width: 576px)">
+                      <img srcset="img/ad_739x400.jpg" class="d-block img-fluid">
+                  </picture>
+              </div>
+              
+              <div class="carousel-item">
+                  <!-- 輪播項目，編號: 貳 -->
+                  <picture>
+                      <source srcset="img/ad3_1200x700.jpg" media="(min-width: 768px)">
+                      <source srcset="img/ad3_924x500.jpg" media="(min-width: 576px)">
+                      <img srcset="img/ad3_739x400.jpg" class="d-block img-fluid">
+                  </picture>
+              </div>
+            </div>
+      </div>
      
       <!-- 各類商品 -->
       <h4 class="article-title mt-3">各類商品</h4>
